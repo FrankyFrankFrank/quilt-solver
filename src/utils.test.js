@@ -25,10 +25,10 @@ describe('utils', () => {
 
     it.each([
         'red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'forestgreen'
-    ])('returns fewer than 36 squares of each color', (color) => {
+    ])('returns fewer than 35 squares of each color', (color) => {
         const squares = generateSquares()
         const squaresOfColor = squares.filter((square) => square.color === color)
-        expect(squaresOfColor.length).toBeLessThan(36)
+        expect(squaresOfColor.length).toBeLessThan(35)
     })
 
     it('never places two squares of the same color next to each other', () => {

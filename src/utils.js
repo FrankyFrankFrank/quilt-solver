@@ -11,10 +11,17 @@ export const generateSquares = () => {
             column,
             row,
         })
-        squares[i].color = getRandomColor(colors)
+        squares[i].color = getColorUnusedInRow(squares, row, colors)
     }
     
     return squares
+}
+
+const getColorUnusedInRow = (squares, row, colors) => {
+    const squaresOnRow = squares.filter((square) => square.row === row)
+    const colorsOnRow = squaresOnRow.map((square) => square.color)
+    const colorsUnusedInRow = colors.filter((color) => !colorsOnRow.includes(color))
+    return getRandomColor(colorsUnusedInRow)
 }
 
 const getRandomColor = (colors) => {

@@ -50,7 +50,7 @@ const getColorUnusedInColumnOrRowFewerThanTwoTimes = (squares, column, row, colo
 const getColorUsed34OrFewerTimes = (colors, squares) => {
     const color = getRandomElementFromArray(colors)
     const squaresOfColor = squares.filter((square) => square.color === color)
-    if (squaresOfColor.length <= 35) {
+    if (squaresOfColor.length <= 32) {
         return color
     } else {
         return getColorUsed34OrFewerTimes(colors, squares)

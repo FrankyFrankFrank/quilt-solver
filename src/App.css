@@ -1,0 +1,15 @@
+#grid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  height: 608px;
+  width: 608px;
+  background-color: hsl(0, 0%, 40%);
+  gap: 1px;
+}
+
+.square {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}

@@ -12,7 +12,11 @@ function App() {
           key={index}
           className="square"
           style={{ backgroundColor: square.color }}
-        />
+        >
+          <svg width="38" height="38" viewBox="0 0 100 100">
+            <polygon points="0 0, 100 0, 100 100" fill='white' />
+          </svg>
+        </div>
       ))}
     </div>
   )

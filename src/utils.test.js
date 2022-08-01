@@ -48,7 +48,7 @@ describe('utils', () => {
     })
 
     it.each([
-        'red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'forestgreen'
+        'red', 'lightgreen', 'blue', 'yellow', 'orange', 'purple', 'pink', 'darkgreen'
     ])('puts two %s per row', (color) => {
         const rows = [
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15

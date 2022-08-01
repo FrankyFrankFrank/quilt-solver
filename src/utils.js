@@ -1,7 +1,7 @@
 export const generateSquares = () => {
     const squares = []
     const colors = [
-        'red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'forestgreen'
+        'red', 'lightgreen', 'blue', 'yellow', 'orange', 'purple', 'pink', 'darkgreen'
     ]
 
     for (let i = 0; i < 256; i++) {
@@ -42,7 +42,7 @@ const getColorUnusedInColumnOrRowFewerThanTwoTimes = (squares, column, row, colo
     const color = getColorUsed34OrFewerTimes(colorsNotImmediatelyOnTheLeftOrRight, squares)
 
     if (!color) {
-        return getRandomElementFromArray(colors)
+        return getColorUsed34OrFewerTimes(colorsUnusedInColumn, squares)
     } 
     return color
 }
@@ -50,7 +50,7 @@ const getColorUnusedInColumnOrRowFewerThanTwoTimes = (squares, column, row, colo
 const getColorUsed34OrFewerTimes = (colors, squares) => {
     const color = getRandomElementFromArray(colors)
     const squaresOfColor = squares.filter((square) => square.color === color)
-    if (squaresOfColor.length < 36) {
+    if (squaresOfColor.length < 35) {
         return color
     } else {
         return getColorUsed34OrFewerTimes(colors, squares)
